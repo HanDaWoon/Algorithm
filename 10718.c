@@ -1,0 +1,13 @@
+//
+// Created by HanDaWoon on 2018-11-11.
+//
+
+#include <stdio.h>
+
+int main()
+{
+    printf("강한친구 대한육군\n");
+    printf("강한친구 대한육군");
+
+    return 0;
+}
