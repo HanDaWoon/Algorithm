@@ -2,9 +2,13 @@ alphabet = list(map(chr, range(97, 123)))
 
 S = list(str(input()))
 
-locate = []
+arr = list()
 
-for char in alphabet:
-    for i in range(S):
-        if char == S[i]:
-            locate.append(i)
+for i in alphabet:
+    try:
+        arr.append(S.index(i))
+    except ValueError:
+        arr.append(-1)
+
+for j in arr:
+    print(j, end=' ')
