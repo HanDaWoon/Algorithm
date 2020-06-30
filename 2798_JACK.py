@@ -23,4 +23,8 @@ while check == True:
                 print(temp)
                 exit()
     print(tmp)
+<<<<<<< HEAD
     cnt += 1
+=======
+    cnt += 1
+>>>>>>> 7910a6848828f5eefa64deba9b8c5691f5cf1e3d
