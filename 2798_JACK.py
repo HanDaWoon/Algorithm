@@ -16,16 +16,4 @@ for k in range(N):
             temp = card_list[i]+j+exceptt
             if temp >= tmp and temp <= M:
                 tmp = temp
-<<<<<<< HEAD
 print(tmp)
-=======
-            elif temp == M:
-                print(temp)
-                exit()
-    print(tmp)
-<<<<<<< HEAD
-    cnt += 1
-=======
-    cnt += 1
->>>>>>> 7910a6848828f5eefa64deba9b8c5691f5cf1e3d
->>>>>>> e35299031252720da025613f1bdbb849993d4572
