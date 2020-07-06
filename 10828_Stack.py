@@ -1,43 +1,51 @@
-class Stack(list):
+import sys
+
+class Stack():
     def __init__(self):
-        self.stack = list()
-
-    def push_X(self, data):
-        self.stack.append(data)
-        return data
-
-    def empty(self):
-        if len(self.stack) == 0:
+        self.stack = []
+    
+    def push_X(self, N):
+        self.stack.append(N)
+    
+    def is_empty(self):
+        if self.stack == []:
+            return 1
+        else:
             return 0
-        return 1
-
+    
     def pop(self):
-        if self.empty() == 0:
+        if self.stack == []:
             return -1
-        return list.pop(self)
-
+        else:
+            return self.stack.pop()
+            
+    
+    def top(self):
+        if self.stack == []:
+            return -1
+        else:
+            return self.stack[-1]
+    
     def size(self):
         return len(self.stack)
 
-    def top(self):
-        if self.empty():
-            return -1
-        return self.stack[::-1]
 
-for _ in range(int(input())):
-    order = input().split()
+s = Stack()
+
+for _ in range(int(sys.stdin.readline())):
+    order = sys.stdin.readline().split()
 
     if "push" in order:
-        print(Stack().push_X(int(order[1])))
+        s.push_X(int(order[1]))
 
     elif "pop" in order:
-        print(Stack().pop())
+        print(s.pop())
 
     elif "size" in order:
-        print(Stack().size())
+        print(s.size())
 
     elif "empty" in order:
-        print(Stack().empty())
+        print(s.is_empty())
 
     elif "top" in order:
-        print(Stack().top())
+        print(s.top())
