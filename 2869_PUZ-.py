@@ -1,5 +1,3 @@
-import sys
-
-A, B, V = map(int, sys.stdin.readline().split())
+A, B, V = map(int, input().split())
 
 print((V-B-1)//(A-B)+1)
