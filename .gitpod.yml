@@ -3,7 +3,3 @@ image: gitpod/workspace-full
 tasks:
   - init: 'echo "TODO: Replace with init/build command"'
     command: 'echo "TODO: Replace with command to start project"'
-
-vscode:
-  extensions:
-    - magicstack.MagicPython@1.1.1:Q+4h8/d9eu9kME/nNfIDlg==
