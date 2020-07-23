@@ -1,12 +1,16 @@
 import sys
+from operator import itemgetter
 
 N = int(sys.stdin.readline())
-meeting_time = list()
-assignment = list()
+time = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
+ass = list()
 
-for _ in range(N):
-    meeting_time.append(list(map(int, sys.stdin.readline().split())))
+time = sorted(time, key=itemgetter(1,0))
 
-assignment.append(meeting_time[0])  # (1, 4)
+ass.append(time[0])
 
-print(assignment)
+for i in range(1, N):
+    if  time[i][0] >= ass[-1][1]:
+        ass.append(time[i])
+
+print(len(ass))
